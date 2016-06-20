@@ -14,7 +14,7 @@
 	<string>OSX10.9</string>
     </dict>
     <key>ParentRecipe</key>
-    <string>com.github.autopkg.pkg.googlechrome</string>
+    <string>com.github.goobersmooch.pkg.googlechrome</string>
     <key>MinimumVersion</key>
     <string>0.4.0</string>
     <key>Process</key>
