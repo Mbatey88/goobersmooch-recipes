@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# Pre-install for Chrome Preferences
+# Remove the existing preferences in the
+# System user template if they exist
+# Also remove the Google Master Preferences 
+# If it exists so that we can install a clean copy
+
+# Remove Existing Google Chrome application if it exists
+if [ -r "/Applications/Google Chrome.app" ]; then
+	rm -rf "/Applications/Google Chrome.app"
+fi
+
+# Remove Existing Master Preferences File if it exists
+if [ -r "/Library/Google/Google Chrome Master Preferences" ]; then
+	rm -rf "/Library/Google/Google Chrome Master Preferences"
+fi
+
+# Remove Existing User Template Preferences
+if [ -d "/System/Library/User Template/English.lproj/Library/Application Support/Google/Chrome" ]; then
+	rm -rf "/System/Library/User Template/English.lproj/Library/Application Support/Google/Chrome"
+fi
+
+exit 0

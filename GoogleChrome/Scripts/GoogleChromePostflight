@@ -1,0 +1,44 @@
+#!/bin/bash
+
+# Post-install for Chrome Preferences
+# Copy the Chrome template into the 
+# System User Template
+#
+# We should also check for existing users on the system 
+# that might have fallen through the gaps.
+# If they do not already have a Google Chrome Profile/Template
+# Then create one and copy our preferences in to it
+
+# Where is our generic template
+#chrome_template="/Library/Scripts/YOUR_ORG_NAME/Google/Chrome"
+#chrome_template="Chrome"
+
+# Get a list of our users in /Users - ignore some folders that are not user accounts
+Users=($(find /Users -maxdepth 1 | grep -v -e ".localized" -e "Shared" -e "Deleted Users" -e ".DS_Store" | tail +2 | awk -F "/" '{print $3}'))
+
+# Test if we have the Google Chrome folder already, if not create it.
+if [ ! -d "/System/Library/User Template/English.lproj/Library/Application Support/Google/Chrome" ]; then
+	mkdir -p "/System/Library/User Template/English.lproj/Library/Application Support/Google/Chrome"
+fi
+
+# Copy our template into our User Template
+cp -R Chrome "/System/Library/User Template/English.lproj/Library/Application Support/Google/"
+
+# Set the permissions appropriately
+chown -R root:wheel "/System/Library/User Template/English.lproj/Library/Application Support/Google"
+chmod 755 "/System/Library/User Template/English.lproj/Library/Application Support/Google"
+
+# Loop through our users, looking for existing google folder, create it if it doesn't exist
+for P in "${Users[@]}"
+do
+	if [ ! -d "/Users/$P/Library/Application Support/Google/Chrome" ]; then
+			mkdir -p "/Users/$P/Library/Application Support/Google/Chrome"
+			cp -R Chrome "/Users/$P/Library/Application Support/Google/"
+			chown -R $P "/Users/$P/Library/Application Support/Google"
+			chmod -R 755 "/Users/$P/Library/Application Support/Google"
+		else
+			echo "User already has a Google Chrome folder, assuming they have already have a profile, no need to do anything"
+	fi
+done
+
+exit 0
