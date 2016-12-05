@@ -32,6 +32,8 @@
                 <string>%RECIPE_CACHE_DIR%/%NAME% %version%.pkg</string>
                 <key>import_pkg_to_servercenter</key>
                 <true/>
+		<key>download_payloads_before_user_dialog</key>
+		<true/>
             </dict>
         </dict>
     </array>
