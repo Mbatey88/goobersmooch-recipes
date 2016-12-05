@@ -39,6 +39,8 @@ do
 		else
 			echo "User already has a Google Chrome folder, assuming they have already have a profile, no need to do anything"
 	fi
+	## Disable google chrome auto updates.
+	defaults write "/Users/$P/Library/Preferences/com.google.Keystone.Agent.plist" checkInterval 0
 done
 
 exit 0
