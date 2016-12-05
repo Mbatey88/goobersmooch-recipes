@@ -21,7 +21,7 @@
     <array>
         <dict>
             <key>Processor</key>
-            <string>LANrevImporter</string>
+            <string>com.github.jbaker10.LANrevImporter</string>
             <key>Arguments</key>
             <dict>
                 <key>dest_payload_path</key>
