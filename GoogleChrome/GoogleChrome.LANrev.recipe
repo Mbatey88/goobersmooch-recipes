@@ -35,6 +35,8 @@
 		<key>download_payloads_before_user_dialog</key>
 		<true/>
             </dict>
+	    <key>SharedProcessorRepoURL</key>
+	    <string>https://github.com/jbaker10/LANrevImporter</string>
         </dict>
     </array>
 </dict>
