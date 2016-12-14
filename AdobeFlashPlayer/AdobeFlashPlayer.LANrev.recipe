@@ -12,7 +12,7 @@
         <string>Adobe Flash Player</string>
     </dict>
     <key>ParentRecipe</key>
-    <string>com.github.autopkg.pkg.FlashPlayerExtractPackage</string>
+    <string>com.github.goobersmooch.pkg.FlashPlayerExtractPackage</string>
     <key>MinimumVersion</key>
     <string>0.4.0</string>
     <key>Process</key>
