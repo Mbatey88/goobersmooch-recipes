@@ -32,6 +32,8 @@
                 <true/>
                 <key>download_payloads_before_user_dialog</key>
                 <true/>
+                <key>staging_server_option</key>
+                <integer>2</integer>
             </dict>
             <key>SharedProcessorRepoURL</key>
             <string>https://github.com/jbaker10/LANrevImporter</string>
