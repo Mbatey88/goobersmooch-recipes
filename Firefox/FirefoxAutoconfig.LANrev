@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads latest Firefox for LANrev</string>
 	<key>Identifier</key>
-	<string>com.github.patgmac.lanrev.FirefoxAutoconfig</string>
+	<string>com.github.goobersmooch.LANrev.FirefoxAutoconfig</string>
 	<key>Input</key>
 	<dict>
 		<key>AUTOCONFIG_DIR</key>
