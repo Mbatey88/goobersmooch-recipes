@@ -30,7 +30,7 @@
 	<key>MinimumVersion</key>
 	<string>0.4.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.gregneagle.pkg.FirefoxAutoconfig</string>
+	<string>com.github.goobersmooch.FirefoxAutoconfig.pkg</string>
 	<key>Process</key>
 	<array>
 		<dict>
