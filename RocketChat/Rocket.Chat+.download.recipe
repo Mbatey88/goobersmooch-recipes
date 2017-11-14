@@ -23,7 +23,7 @@
 				<key>github_repo</key>
 				<string>%GITHUB_REPO%</string>
 				<key>asset_regex</key>
-				<string>^\w{10}-\d.\d.\d.dmg$</string>
+				<string>^\w{10}-\d.(\d|\d\d).\d.dmg$</string>
 			</dict>
 			<key>Processor</key>
 			<string>GitHubReleasesInfoProvider</string>
